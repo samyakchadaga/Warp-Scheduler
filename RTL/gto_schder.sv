@@ -1,24 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 07/31/2026 07:16:02 PM
-// Design Name: 
-// Module Name: gto_schder
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Module Name: Greedy-the-Older Scheduler
+// Project Name: Warp-Scheduler
+// Target Devices: GPU
+// Tool Versions: 2024.1
 //////////////////////////////////////////////////////////////////////////////////
-
 
 module gto_schder#(
   parameter NUM_WARPS = 8
