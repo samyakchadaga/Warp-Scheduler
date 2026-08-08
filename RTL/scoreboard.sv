@@ -1,22 +1,9 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 07/17/2026 09:18:10 PM
-// Design Name: 
-// Module Name: hhhh
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Module Name: Scoreboard
+// Project Name: Warp-Scheduler
+// Target Devices: GPU 
+// Tool Versions: 2024.1
 //////////////////////////////////////////////////////////////////////////////////
 
 module scoreboard#(
