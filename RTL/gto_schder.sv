@@ -34,7 +34,7 @@ output logic [$clog2(NUM_WARPS)-1:0]issued_warp
     
     logic [$clog2(NUM_WARPS)-1:0]age[0:(NUM_WARPS-1)];
     logic [$clog2(NUM_WARPS)-1:0]curr_warp;
-    logic [$clog2(NUM_WARPS)-1:0] min_age;
+    logic [$clog2(NUM_WARPS):0] min_age;
     logic switch;
     logic [$clog2(NUM_WARPS)-1:0] k;
     
