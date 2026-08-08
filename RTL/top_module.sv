@@ -1,22 +1,9 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 07/17/2026 09:18:10 PM
-// Design Name: 
-// Module Name: hhhh
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+///////////////////////////////////////////////////////////////////////////////////
+// Module Name: Top Module
+// Project Name: Warp-Scheduler 
+// Target Devices: GPU
+// Tool Versions: Vivado 2024.1
 //////////////////////////////////////////////////////////////////////////////////
 
 module top_module#(
@@ -24,9 +11,11 @@ module top_module#(
 )(
 input clk,
 input rst,
+input last_inst,
+input [NUM_WARPS-1:0] load_bitmap,
+input [NUM_WARPS-1:0] last_bitmap,
 
-input [NUM_WARPS-1:0]load_bitmap,
-
+output logic valid_top,
 output logic [$clog2(NUM_WARPS)-1:0]issued_warp
     );
     
@@ -43,10 +32,11 @@ output logic [$clog2(NUM_WARPS)-1:0]issued_warp
     .mem_return(mem_return_wire),
     .scheduler_valid(scheduler_valid),
     .is_load(load_bitmap[issued_warp_wire]),
+    .last_inst(last_bitmap[issued_warp_wire]),
     .warp_rd(warp_rd_wire)
     );
     
-     rr_schder rr1(
+    rr_schder rr1(   //rr_schder rr1 gto_schder gto1
     .clk(clk),
     .rst(rst),
     .warp_rd(warp_rd_wire),
@@ -74,5 +64,6 @@ output logic [$clog2(NUM_WARPS)-1:0]issued_warp
     .mem_return(mem_return_wire)
     );
 
-assign issued_warp = issued_warp_wire;    
+assign issued_warp = issued_warp_wire;  
+assign valid_top = scheduler_valid;  
 endmodule
