@@ -1,22 +1,9 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 07/17/2026 09:18:10 PM
-// Design Name: 
 // Module Name: Round-Robin Scheduler
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Project Name: Warp-Scheduler
+// Target Devices: GPU
+// Tool Versions: Vivado 2024.1
 //////////////////////////////////////////////////////////////////////////////////
 
 module rr_schder#(
